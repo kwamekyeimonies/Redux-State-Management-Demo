@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    count: 0
+    count: 0,
+    salutation: "Welcome"
 }
 
 export const counterSlice = createSlice({
@@ -14,13 +15,25 @@ export const counterSlice = createSlice({
 
         decrement: (state) =>{
             state.count -=1;
-        }
+        },
+        reset: (state)=>{
+            state.count = 0
+        },
+        incrementByAmount: (state,action)=>{
+            state.count = state.count + action.payload
+        },
+        // greetingUser: (state,action)=>{
+        //     state.salutation = state.salutation + action.payload
+        // }
     }
 })
 
 export const {
     increment,
-    decrement
+    decrement, 
+    reset,
+    incrementByAmount,
+    greetingUser
 } = counterSlice.actions
 
 

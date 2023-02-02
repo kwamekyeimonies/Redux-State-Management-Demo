@@ -9,7 +9,7 @@ const initialState = [
     {
         id:2,
         content:"The Journey of Backend Engineer",
-        title:"Jenkins Pipeline configuration"
+        title:"Jenkins Pipeline configuration" 
     }
 ]
 
@@ -21,12 +21,14 @@ const postSlice = createSlice({
             reducer(state,action){
                 state.push(action.payload)
             },
-            prepare(title,content){
+            prepare(title,content,userId){
                 return{
                     payload:{
                         id:nanoid(),
                         title,
-                        content
+                        content,
+                        date: new Date().toISOString(),
+                        userId
                     }
                 }
             }

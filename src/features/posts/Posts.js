@@ -8,10 +8,10 @@ const Posts = () => {
 
   const posts = useSelector(selectAllPosts)
 
-  // const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
-  const orderedPosts = posts.slice().sort((a, b) => {
-  return new Date(b.date) - new Date(a.date);
-});
+  const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+//   const orderedPosts = posts.slice().sort((a, b) => {
+//   return new Date(b.date) - new Date(a.date);
+// });
 
 
   const renderedPosts = orderedPosts.map(

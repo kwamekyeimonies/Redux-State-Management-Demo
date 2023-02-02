@@ -1,15 +1,18 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { sub } from "date-fns";
 
 const initialState = [
     {
         id:1,
         content:"The Journey of Backend Engineer",
-        title:"Ansible Development in writing System Configurations"
+        title:"Ansible Development in writing System Configurations",
+        date:sub(new Date(),{minutes:10}).toISOString()
     },
     {
         id:2,
         content:"The Journey of Backend Engineer",
-        title:"Jenkins Pipeline configuration" 
+        title:"Jenkins Pipeline configuration" ,
+        date:sub(new Date(),{minutes:10}).toISOString()
     }
 ]
 

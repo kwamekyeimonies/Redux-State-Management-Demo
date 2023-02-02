@@ -33,7 +33,6 @@ export const {
     decrement, 
     reset,
     incrementByAmount,
-    greetingUser
 } = counterSlice.actions
 
 

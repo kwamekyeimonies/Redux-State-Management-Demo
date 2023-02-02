@@ -1,10 +1,14 @@
 import React from 'react'
-import Counter from './app/features/counter/Counter'
+import Counter from './features/counter/Counter'
+import AddPostForm from './features/posts/AddPostForm'
+import Posts from './features/posts/Posts'
 
 const App = () => {
   return (
     <main className='App'>
-      <Counter  />
+      {/* <Counter  /> */}
+      <AddPostForm  />
+      <Posts  />
     </main>
   )
 }

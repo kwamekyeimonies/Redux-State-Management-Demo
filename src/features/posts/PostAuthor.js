@@ -17,6 +17,6 @@ const PostAuthor = ({userId}) => {
         }
     </span>
   )
-}
+} 
 
 export default PostAuthor
